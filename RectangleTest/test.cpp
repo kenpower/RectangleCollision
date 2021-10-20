@@ -2,7 +2,7 @@
 
 #include "../RectangleCollision/Rectangle.h"
 
-TEST(CollidesWithSame, Rectangle) {
+TEST(Rectangle, CollidesWithSame) {
 
 	Rectangle a{ 0,0,1,1 };
 	Rectangle b{ 0,0,1,1 };
@@ -10,7 +10,7 @@ TEST(CollidesWithSame, Rectangle) {
 	ASSERT_TRUE(a.collidesWith(b));
 }
 
-TEST(DoesNotCollidesOnLeft, Rectangle) {
+TEST(Rectangle, DoesNotCollidesOnLeft) {
 
 	Rectangle a{ 0,0,1,1 };
 	Rectangle b{ 2,0,1,1 };
@@ -18,7 +18,7 @@ TEST(DoesNotCollidesOnLeft, Rectangle) {
 	ASSERT_FALSE(a.collidesWith(b));
 }
 
-TEST(DoesNotCollidesOnRight, Rectangle) {
+TEST(Rectangle, DoesNotCollidesOnRight) {
 
 	Rectangle a{ 0,0,1,1 };
 	Rectangle b{ 2,0,1,1 };
@@ -26,7 +26,7 @@ TEST(DoesNotCollidesOnRight, Rectangle) {
 	ASSERT_FALSE(b.collidesWith(a));
 }
 
-TEST(DoesNotCollidesAbove, Rectangle) {
+TEST(Rectangle, DoesNotCollidesAbove) {
 
 	Rectangle a{ 0,0,1,1 };
 	Rectangle b{ 0,2,1,1 };
@@ -34,7 +34,7 @@ TEST(DoesNotCollidesAbove, Rectangle) {
 	ASSERT_FALSE(a.collidesWith(b));
 }
 
-TEST(DoesNotCollidesUnder, Rectangle) {
+TEST(Rectangle, DoesNotCollidesUnder) {
 
 	Rectangle a{ 0,0,1,1 };
 	Rectangle b{ 0,-2,1,1 };
@@ -42,7 +42,7 @@ TEST(DoesNotCollidesUnder, Rectangle) {
 	ASSERT_FALSE(a.collidesWith(b));
 }
 
-TEST(DoesNotCollidesDiagonal, Rectangle) {
+TEST(Rectangle, DoesNotCollidesDiagonal) {
 
 	Rectangle a{ 0,0,1,1 };
 	Rectangle b{ 2,2,1,1 };
@@ -50,7 +50,7 @@ TEST(DoesNotCollidesDiagonal, Rectangle) {
 	ASSERT_FALSE(a.collidesWith(b));
 }
 
-TEST(DoesCollidesDiagonalOverlap, Rectangle) {
+TEST(Rectangle, DoesCollidesDiagonalOverlap) {
 
 	Rectangle a{ 0,0,2,2 };
 	Rectangle b{ 2,2,2,2 };
@@ -59,7 +59,7 @@ TEST(DoesCollidesDiagonalOverlap, Rectangle) {
 	ASSERT_TRUE(b.collidesWith(a));
 }
 
-TEST(DoesCollidesDiagonalInside, Rectangle) {
+TEST(Rectangle, DoesCollidesDiagonalInside) {
 
 	Rectangle a{ 0,0,3,3 };
 	Rectangle b{ 1,1,1,1 };
